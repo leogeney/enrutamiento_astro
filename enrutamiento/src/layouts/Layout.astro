@@ -1,9 +1,9 @@
 ---
-interface Props {
-	title: string;
-}
 
-const { title } = Astro.props;
+
+const { title =' No name',  msj = 'hola'} = Astro.props;
+
+
 ---
 
 <!doctype html>
@@ -17,34 +17,32 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		
+		<header class="bg-blue-600 h-[80px]">
+			  
+
+		</header>
+		<menu class="bg-red-500 flex   font-semibold text-white font-mono justify-around">
+			<li class="">
+				<a href="/"  class="hover:bg-red-950/25 block  px-2">INICIO</a>
+				
+			</li>
+
+			<li >
+				<a href="/quienes_somos" class="hover:bg-red-950/25 block px-2">QUIENES SOMOS</a>
+			</li>
+
+			<li >
+				<a href="/organigrama" class="hover:bg-red-950/25 block px-2">Organigrama</a>
+			</li>
+
+
+			<li >
+				<a href="/contacto" class="hover:bg-red-950/25 block px-2">CONTACTO</a></li>
+
+		</menu>
+		{msj}
+
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
