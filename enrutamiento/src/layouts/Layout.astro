@@ -3,6 +3,7 @@
 
 const { title =' No name',  msj = 'hola'} = Astro.props;
 
+import Slider from "../components/slider.astro";
 
 ---
 
@@ -43,6 +44,9 @@ const { title =' No name',  msj = 'hola'} = Astro.props;
 		</menu>
 		{msj}
 
+		<Slider client:load >
+
+		</Slider>
 		<slot />
 	</body>
 </html>

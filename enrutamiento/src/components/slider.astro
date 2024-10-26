@@ -1,0 +1,50 @@
+---
+
+---
+
+<!-- Slider main container -->
+<div class="swiper w-[100vw] h-[500px] ">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide bg-slate-800">Slide 1</div>
+      <div class="swiper-slide">
+        Silde 2
+      </div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev">
+        
+    </div>
+    <div class="swiper-button-next relative">
+     
+    </div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+<style>
+    .swiper-button-prev,
+.swiper-button-next {
+    width: 25px; 
+    height: 25px; 
+    opacity: 1; 
+    border-radius: 10px; 
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+}
+.swiper-slide{
+  overflow: hidden;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px; 
+
+}
+</style>
+  <script  src="enrutamiento/src/js/slider.js"></script>
+
