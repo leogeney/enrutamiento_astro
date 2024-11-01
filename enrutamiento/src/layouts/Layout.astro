@@ -44,9 +44,16 @@ import Slider from "../components/slider.astro";
 		</menu>
 		{msj}
 
-		<Slider client:load >
-
-		</Slider>
+	
 		<slot />
 	</body>
+
+	<style>
+	@font-face {
+		font-family: 'myfonts';
+		src: url('fonts/Amaranth-Bold.ttf'); 
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	  }</style>
 </html>
