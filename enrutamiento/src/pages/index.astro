@@ -13,18 +13,80 @@ este es el inicio
 <Icon name="mdi:delete-outline" size="59" class="text-rose-950"/>
 <Icon name="devicon:browserstack" size="59" />
 
+<div class="btn">
+    pincahe
+</div>
+
+
+<ul data-tabs>
+	<li><a data-tabby-default href="#harry">Harry Potter</a></li>
+	<li><a href="#hermione">Hermione</a></li>
+	<li><a href="#neville">Neville</a></li>
+</ul>
+
+<div id="harry">1</div>
+<div id="hermione">2</div>
+<div id="neville">3</div>
+
+
+<div class="embla">
+    <div class="embla__container">
+      <div class="embla__slide bg-gray-400 ">Slide 1</div>
+      <div class="embla__slide bg-orange-700">Slide 2</div>
+      <div class="embla__slide bg-green-600">Slide 3</div>
+    </div>
+  </div>
+
+
+
 </Layout>
 
 <style>
+
+
+
 .pretty-p{
 
     
-    @apply bg-red-500 p-6 text-white rounded hover:bg-red-900 h-60;
+    @apply bg-blue-500 p-6 text-white rounded hover:bg-red-900 h-60;
     clip-path: polygon(100% 0%, 0% 0% , 0.00% 46.05%, 2.00% 45.76%, 4.00% 44.91%, 6.00% 43.55%, 8.00% 41.76%, 10.00% 39.63%, 12.00% 37.29%, 14.00% 34.87%, 16.00% 32.51%, 18.00% 30.34%, 20.00% 28.49%, 22.00% 27.05%, 24.00% 26.12%, 26.00% 25.74%, 28.00% 25.94%, 30.00% 26.70%, 32.00% 27.98%, 34.00% 29.72%, 36.00% 31.80%, 38.00% 34.11%, 40.00% 36.53%, 42.00% 38.91%, 44.00% 41.12%, 46.00% 43.03%, 48.00% 44.54%, 50.00% 45.55%, 52.00% 46.02%, 54.00% 45.91%, 56.00% 45.24%, 58.00% 44.03%, 60.00% 42.37%, 62.00% 40.33%, 64.00% 38.05%, 66.00% 35.64%, 68.00% 33.24%, 70.00% 31.00%, 72.00% 29.03%, 74.00% 27.45%, 76.00% 26.36%, 78.00% 25.80%, 80.00% 25.81%, 82.00% 26.40%, 84.00% 27.53%, 86.00% 29.13%, 88.00% 31.11%, 90.00% 33.37%, 92.00% 35.76%, 94.00% 38.17%, 96.00% 40.45%, 98.00% 42.46%, 100.00% 44.11%);
 
 
 }
 
+.embla {
+    @apply bg-black text-white mx-14;
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 50%;
+  min-width: 0;
+}
+
+
 
     
 </style>
+<script>
+import EmblaCarousel from 'embla-carousel'
+    import JSConfetti from 'js-confetti';
+
+    const jsConfetti = new JSConfetti();
+   
+    const divBtn = document.getElementById("btn");
+
+    jsConfetti.addConfetti()
+
+   
+
+    import Tabby from 'tabbyjs'
+
+    var tabs = new Tabby('[data-tabs]');
+    const emblaNode = document.querySelector('.embla')
+const options = { loop: false }
+const emblaApi = EmblaCarousel(emblaNode, options)
+    
+</script>
