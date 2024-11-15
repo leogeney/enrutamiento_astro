@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+import Notificacion from "../components/vue/Notificacion.vue";
+
 ---
 
 <Layout msj = 'charlemos' >
@@ -7,4 +10,8 @@ import Layout from "../layouts/Layout.astro"
 
 
 </Layout>
+<br>
+<Notificacion client:load>
+    
+</Notificacion>
 
